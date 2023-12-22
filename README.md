@@ -3,48 +3,43 @@
 
 ## Description
 
-This is a CLI application. Using the terminal, the user can interact with information in a database. 
+This is a CLI application. 
+
+After running the cli.py file in the terminal, the user is presented with leveled menus, allowing them to interact with information about planets and their moons.
+The user can submit planets to database, view lists of planets and moons, and perform other actions. Most importantly, the user can enter a planet to view its moons, and enter a moon to view its parent planet.
+If the user's entry results in a error, a descriptive error response is displayed.
 
 ---
 
-## Introduction
+## Visuals
+This is an image of the full menu:
 
-You now have a basic idea of what constitutes a CLI. Fork and clone this lesson
-for a project template for your CLI.
-
-Take a look at the directory structure:
-
-```console
-.
-├── Pipfile
-├── Pipfile.lock
-├── README.md
-└── lib
-    ├── models
-    │   ├── __init__.py
-    │   └── model_1.py
-    ├── cli.py
-    ├── debug.py
-    └── helpers.py
-```
-
-Note: The directory also includes two files named `CONTRIBUTING.md` and
-`LICENSE.md` that are specific to Flatiron's curriculum. You can disregard or
-delete the files if you want.
+![Alt text](<Screenshot 2023-12-22 at 11.28.35 AM.png>)
 
 ---
 
-## Generating Your Environment
+## Setting up the Application on your Machine
 
-You might have noticed in the file structure- there's already a Pipfile!
+Fork the Repository:
+Fork the repository on GitHub.
 
-Install any additional dependencies you know you'll need for your project by
-adding them to the `Pipfile`. Then run the commands:
+Clone the forked repository to your local machine:
+Command: git clone git@github.com:chayavogel/Phase-3-Project.git
 
-```console
-pipenv install
-pipenv shell
-```
+Navigate to the Project Directory:
+Command: cd Phase-3-Project
+
+Install Dependencies:
+Create a virtual environment and install the project dependencies.
+Command: pipenv install
+
+Activate the Virtual Environment:
+Command: pipenv shell
+
+Run the CLI Application:
+Command: python my_cli_app.py
+
+You may now navigate the menu!
 
 ---
 
