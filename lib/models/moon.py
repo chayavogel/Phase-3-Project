@@ -10,12 +10,7 @@ class Moon:
         self.id = id
         self.name = name
         self.planet_id = planet_id
-    
-    def __repr__(self):
-        return (
-            f"<Moon {self.id}: {self.name} || Parent Planet ID: {self.planet_id}>"
-        )
-    
+
     @property
     def name(self):
         return self._name

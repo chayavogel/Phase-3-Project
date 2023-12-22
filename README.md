@@ -1,9 +1,9 @@
-# Phase 3 CLI+ORM Project Template
+# Phase 3 CLI+ORM Project
+## The Solar System: A Relationship between Planets and their Moons
 
-## Learning Goals
+## Description
 
-- Discuss the basic directory structure of a CLI.
-- Outline the first steps in building a CLI.
+This is a CLI application. Using the terminal, the user can interact with information in a database. 
 
 ---
 

@@ -20,11 +20,6 @@ class Planet:
         self.id = id
         self.name = name
         self.color = color
-
-    def __repr__(self):
-        return (
-            f"<Planet {self.id}: name = {self.name}, color = {self.color}>"
-        )
     
     @property
     def name(self):

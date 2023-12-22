@@ -2,17 +2,16 @@ from helpers import (
     exit_program,
     list_planets,
     find_planet_by_name,
-    find_planet_by_id,
     create_planet,
     update_planet,
     delete_planet,
     list_moons,
     find_moon_by_name,
-    find_moon_by_id,
     create_moon,
     update_moon,
     delete_moon,
-    list_planet_moons
+    list_planet_moons,
+    display_moon_planet
 )
 
 def main():
@@ -55,18 +54,15 @@ def planets():
             find_planet_by_name()
 
         elif planet_choice == "3":
-            find_planet_by_id()
-
-        elif planet_choice == "4":
             create_planet()
 
-        elif planet_choice == "5":
+        elif planet_choice == "4":
             update_planet()
 
-        elif planet_choice == "6":
+        elif planet_choice == "5":
             delete_planet()
 
-        elif planet_choice == "7":
+        elif planet_choice == "6":
             list_planet_moons()
 
         else:
@@ -78,11 +74,10 @@ def planets_menu():
     print("0. Exit to main menu")
     print("1. List all planets")
     print("2. Find planet by name")
-    print("3. Find planet by id")
-    print("4. Create planet")
-    print("5. Update planet")
-    print("6. Delete planet")
-    print("7. List all moons in a planet")
+    print("3. Create planet")
+    print("4. Update planet")
+    print("5. Delete planet")
+    print("6. List all moons of a planet")
 
 def moons():
     while True:
@@ -90,7 +85,7 @@ def moons():
         moon_choice = input("> ")
 
         if moon_choice == "0":
-            break  # Exit to main menu
+            break
 
         elif moon_choice == "1":
             list_moons()
@@ -99,20 +94,16 @@ def moons():
             find_moon_by_name()
 
         elif moon_choice == "3":
-            find_moon_by_id()
-
-        elif moon_choice == "4":
             create_moon()
 
-        elif moon_choice == "5":
+        elif moon_choice == "4":
             update_moon()
 
-        elif moon_choice == "6":
+        elif moon_choice == "5":
             delete_moon()
 
-        elif moon_choice == "7":
-            # List all moons in a planet
-            list_planet_moons()
+        elif moon_choice == "6":
+            display_moon_planet()
 
         else:
             print("Invalid choice")
@@ -123,11 +114,10 @@ def moons_menu():
     print("0. Exit to main menu")
     print("1. List all moons")
     print("2. Find moon by name")
-    print("3. Find moon by id")
-    print("4. Create moon")
-    print("5. Update moon")
-    print("6. Delete moon")
-    print("7. List all moons in a planet")
+    print("3. Create moon")
+    print("4. Update moon")
+    print("5. Delete moon")
+    print("6. Display parent planet of a moon")
 
 if __name__ == "__main__":
     main()
