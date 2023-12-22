@@ -18,7 +18,7 @@ This is an image of the full menu:
 
 ---
 
-## Setting up the Application on your Machine
+## Usage
 
 Fork the Repository:
 Fork the repository on GitHub.
@@ -43,97 +43,139 @@ You may now navigate the menu!
 
 ---
 
-## Generating Your CLI
+## The File Structure and Contents
 
-A CLI is, simply put, an interactive script and prompts the user and performs
-operations based on user input.
+.
+├── Pipfile
+├── Pipfile.lock
+├── README.md
+└── lib
+    ├── models
+    │   ├── __init__.py
+    │   └── moon.py
+    │   └── planet.py
+    ├── cli.py
+    ├── debug.py
+    └── helpers.py
+    └── seed.py
 
-The project template has a sample CLI in `lib/cli.py` that looks like this:
+## planet.py
 
-```py
-# lib/cli.py
+The Planet class is designed to represent individual planets in the solar system with associated attributes and provides methods for managing and interacting with planet instances. These methods are called in the `helpers.py` file.
 
-from helpers import (
-    exit_program,
-    helper_1
-)
+## Instance Attributes
 
+- `id`: An integer representing the unique identifier of the planet.
+- `name`: A string representing the name of the planet.
+- `color`: A string representing the color of the planet.
 
-def main():
-    while True:
-        menu()
-        choice = input("> ")
-        if choice == "0":
-            exit_program()
-        elif choice == "1":
-            helper_1()
-        else:
-            print("Invalid choice")
+## Class Methods
 
+### 1. `create_table`
 
-def menu():
-    print("Please select an option:")
-    print("0. Exit the program")
-    print("1. Some useful function")
+Allows you to initially create a database table to store planet information if it hasn't been created yet.
 
+### 2. `drop_table`
 
-if __name__ == "__main__":
-    main()
-```
+Allows you to delete the database table used for storing planet information.
 
-The helper functions are located in `lib/helpers.py`:
+### 3. `save`
 
-```py
-# lib/helpers.py
+Allows you to save a newly created planet instance to the database. The instance is added to the planets table.
 
-def helper_1():
-    print("Performing useful function#1.")
+### 4. `create`
 
+Creates a new planet instance with the provided name and color. This instance is stored in the `all` class attribute.
 
-def exit_program():
-    print("Goodbye!")
-    exit()
-```
+### 5. `update`
 
-You can run the template CLI with `python lib/cli.py`, or include the shebang
-and make it executable with `chmod +x`. The template CLI will ask for input, do
-some work, and accomplish some sort of task.
+Allows you to update the information of a planet both in its object and in the database.
 
-Past that, CLIs can be whatever you'd like, as long as you follow the project
-requirements.
+### 6. `delete`
 
-Of course, you will update `lib/cli.py` with prompts that are appropriate for
-your application, and you will update `lib/helpers.py` to replace `helper_1()`
-with a useful function based on the specific problem domain you decide to
-implement, along with adding other helper functions to the module.
+Allows you to delete a planet instance and remove its corresponding row from the database.
 
-In the `lib/models` folder, you should rename `model_1.py` with the name of a
-data model class from your specific problem domain, and add other classes to the
-folder as needed. The file `lib/models/__init__.py` has been initialized to
-create the necessary database constants. You need to add import statements to
-the various data model classes in order to use the database constants.
+### 7. `instance_from_db`
 
-You are also welcome to implement a different module and directory structure.
-However, your project should be well organized, modular, and follow the design
-principal of separation of concerns, which means you should separate code
-related to:
+Creates a planet instance from a database row. Used to convert database query results into Planet objects.
 
-- User interface
-- Data persistence
-- Problem domain rules and logic
+### 8. `get_all`
+
+Retrieves all planet instances from the database and returns a list of Planet objects.
+
+### 9. `find_by_id`
+
+Finds a planet instance by its ID and returns the corresponding Planet object.
+
+### 10. `find_by_name`
+
+Finds a planet instance by its name and returns the corresponding Planet object.
+
+### 11. `moons`
+
+Retrieves all moons associated with the planet.
+
+## moon.py
+
+The Moon class is designed to represent individual moons with associated attributes and provides methods for managing and interacting with moon instances. These methods are called in the `helpers.py` file.
+
+## Instance Attributes
+
+- `id`: An integer representing the unique identifier of the planet.
+- `name`: A string representing the name of the moon.
+- `planet_id`: An integer representing the ID of the parent planet. It serves as a reference to an instance of the Planet class.
+
+## Class Methods
+
+### 1. `create_table`
+
+Allows you to initially create a database table to store moon information if it hasn't been created yet.
+
+### 2. `drop_table`
+
+Allows you to delete the database table used for storing moon information.
+
+### 3. `create`
+
+Creates a new moon instance with the provided name and planet_id. This instance is stored in the `all` class attribute.
+
+### 4. `instance_from_db`
+
+Creates a moon instance from a database row. Used to convert database query results into Moon objects.
+
+### 5. `get_all`
+
+Retrieves all moon instances from the database and returns a list of Moon objects.
+
+### 6. `find_by_id`
+
+Finds a moon instance by its ID and returns the corresponding Moon object.
+
+### 7. `find_by_name`
+
+Finds a moon instance by its name and returns the corresponding Moon object.
+
+## Instance Methods
+
+### 1. `save`
+
+Allows you to save a newly created moon instance to the database. The instance is added to the moons table.
+
+### 2. `update`
+
+Allows you to update the information of a moon both in its object and in the database.
+
+### 3. `delete`
+
+Allows you to delete a moon instance and remove its corresponding row from the database.
+
+## cli.py
+
+## helpers.py
+
+## seed.py
 
 ---
-
-## Updating README.md
-
-`README.md` is a Markdown file that should describe your project. You will
-replace the contents of this `README.md` file with a description of **your**
-actual project.
-
-Markdown is not a language that we cover in Flatiron's Software Engineering
-curriculum, but it's not a particularly difficult language to learn (if you've
-ever left a comment on Reddit, you might already know the basics). Refer to the
-cheat sheet in this assignments's resources for a basic guide to Markdown.
 
 ### What Goes into a README?
 
@@ -151,17 +193,3 @@ users and collaborators, but a little more syntactically complicated. Only add
 these in if you're feeling comfortable with Markdown.
 
 ---
-
-## Conclusion
-
-A lot of work goes into a good CLI, but it all relies on concepts that you've
-practiced quite a bit by now. Hopefully this template and guide will get you off
-to a good start with your Phase 3 Project.
-
-Happy coding!
-
----
-
-## Resources
-
-- [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
