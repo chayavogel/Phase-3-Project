@@ -35,25 +35,13 @@ Command: `pipenv shell`
 Run the CLI Application:
 Command: `python my_cli_app.py`
 
-You may now navigate the menu!
+You may now navigate the menu by following the prompts!
 
 ---
 
 ## The File Structure and Contents
 
-.
-├── Pipfile
-├── Pipfile.lock
-├── README.md
-└── lib
-    ├── models
-    │   ├── __init__.py
-    │   └── moon.py
-    │   └── planet.py
-    ├── cli.py
-    ├── debug.py
-    └── helpers.py
-    └── seed.py
+![Alt text](<Screenshot 2023-12-25 at 8.06.36 PM.png>)
 
 ## cli.py
 
