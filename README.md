@@ -5,9 +5,6 @@
 
 This is a command line interface (CLI) application that allows users to explore the one-to-many relationship of planets and their multiple moons. It can easily be adapted to represent many other one-to-many relationships.
 
-A moon has one parent planet. This is a many-to-one relationship model.
-A parent planet can have many moons. This is a one-to-many relationship model.
-
 ---
 
 ## Visuals

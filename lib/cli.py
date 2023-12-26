@@ -34,7 +34,7 @@ def main():
 def main_menu():
     print("----------------MAIN MENU----------------")
     print("THE SOLAR SYSTEM")
-    print("Please select an option:")
+    print("Please select an option by entering one of the numbers below:")
     print("0. Exit the program")
     print("1. Planets")
     print("2. Moons")
@@ -70,7 +70,7 @@ def planets():
 
 def planets_menu():
     print("----------------PLANETS MENU----------------")
-    print("Please select an option:")
+    print("Please select an option by entering one of the numbers below:")
     print("0. Exit to main menu")
     print("1. List all planets")
     print("2. Find planet by name")
@@ -110,7 +110,7 @@ def moons():
 
 def moons_menu():
     print("----------------MOONS MENU----------------")
-    print("Please select an option:")
+    print("Please select an option by entering one of the numbers below:")
     print("0. Exit to main menu")
     print("1. List all moons")
     print("2. Find moon by name")
