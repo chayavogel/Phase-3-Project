@@ -33,7 +33,7 @@ class Planet:
             )
         elif not name in PLANETS:
             raise ValueError(
-                "Name must be a correctly-spelled and title-cased planet in the Solar System"
+                "Planet must be a member of the Solar System, in title-case, and correctly spelled."
             )
         else: 
             self._name = name

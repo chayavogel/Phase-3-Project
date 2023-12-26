@@ -112,7 +112,7 @@ def create_moon():
         except Exception as exc:
             print("Error creating planet: ", exc)
     else:
-        print(f"ERROR: Parent planet {name} not found. (Note: planets are case-sensitive)")
+        print(f"ERROR: Parent planet {name} not found. Parent planet must exist before the creation of a moon. (Note: planets are case-sensitive)")
 
 
 def update_moon():
@@ -137,7 +137,7 @@ def update_moon():
         except Exception as exc:
             print(f"Error updating moon: ", exc)
     else: 
-        print(f"Moon {name} not found. (Note: planets are case-sensitive)")
+        print(f"ERROR: Parent planet {name} not found. Parent planet must exist before the creation of a moon. (Note: planets are case-sensitive)")
 
 
 def delete_moon():
@@ -151,7 +151,7 @@ def delete_moon():
         except Exception as exc:
             print(f"Error deleting moon: ", exc)
     else: 
-        print(f"Moon {name} not found. (Note: planets are case-sensitive)")
+        print(f"Moon {name} not found. (Note: Moons are case-sensitive)")
 
 def display_moon_planet():
     name = input("Enter the moon's name: ")
@@ -160,4 +160,4 @@ def display_moon_planet():
         print(f"Parent planet: {parent_planet.name}")
         return parent_planet.name
     else: 
-        print(f"Moon {name} not found. (Note: planets are case-sensitive)") 
+        print(f"Moon {name} not found. (Note: Moons are case-sensitive)") 
