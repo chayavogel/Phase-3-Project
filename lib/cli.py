@@ -76,7 +76,7 @@ def planets_menu():
     print("2. Find planet by name")
     print("3. Create planet")
     print("4. Update planet")
-    print("5. Delete planet")
+    print("5. Delete planet and its moons")
     print("6. List all moons of a planet")
 
 def moons():
