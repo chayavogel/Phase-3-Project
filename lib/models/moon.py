@@ -33,9 +33,7 @@ class Moon:
         if type(planet_id) is int and Planet.find_by_id(planet_id):
             self._planet_id = planet_id
         else:
-            raise ValueError(
-                "planet_id must reference a planet in the database"
-                )
+            raise ValueError("planet_id must reference a planet in the database")
 
     @classmethod
     def create_table(cls):

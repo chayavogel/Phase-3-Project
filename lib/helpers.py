@@ -64,7 +64,7 @@ def delete_planet():
 
     if planet := Planet.find_by_name(name):
         planet.delete()
-        print(f'Planet {name} deleted')
+        print(f'Planet {name} and its moons deleted')
     else:
         print(f"ERROR: Planet {name} not found. (Note: planets are case-sensitive)")
 

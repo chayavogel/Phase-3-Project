@@ -103,32 +103,30 @@ class Planet:
         CURSOR.execute(sql, (self.name, self.color, self.id))
         CONN.commit()
     
-def delete(self):
+    def delete(self):
 
-    planet_sql = """
-        DELETE FROM planets
-        WHERE id = ?
-    """
+        planet_sql = """
+            DELETE FROM planets
+            WHERE id = ?
+        """
 
-    moons_sql = """
-        DELETE FROM moons
-        WHERE planet_id = ?
-    """
+        moons_sql = """
+            DELETE FROM moons
+            WHERE planet_id = ?
+        """
 
-    try:
-        CURSOR.execute(planet_sql, (self.id,))
-        CONN.commit()
+        try:
+            CURSOR.execute(moons_sql, (self.id,))
+            CONN.commit()
 
-        CURSOR.execute(moons_sql, (self.id,))
-        CONN.commit()
+            CURSOR.execute(planet_sql, (self.id,))
+            CONN.commit()
 
-        del type(self).all[self.id]
+            del type(self).all[self.id]
+            self.id = None
 
-        self.id = None
-
-    except Exception as exc:
-        print("Error deleting planet and moons:", exc)
-
+        except Exception as exc:
+            print("Error deleting planet and moons:", exc)
 
     @classmethod
     def instance_from_db(cls, row):
