@@ -32,8 +32,8 @@ def main():
             print("Invalid choice")
 
 def main_menu():
+    print("------------THE SOLAR SYSTEM-------------")
     print("----------------MAIN MENU----------------")
-    print("THE SOLAR SYSTEM")
     print("Please select an option by entering one of the numbers below:")
     print("0. Exit the program")
     print("1. Planets")
