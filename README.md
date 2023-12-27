@@ -11,7 +11,7 @@ This is a command line interface (CLI) application that allows users to explore 
 
 ![CLI Menu](<Screenshot 2023-12-22 at 11.28.35 AM.png>)
 
-![CLI GIF](<video src="GMT20231227-004327_Clip_Chaya%20Vogel's%20Clip%2012_26_2023.mp4" controls title="GMT20231227-004327_Clip_Chaya Vogel's Clip 12_26_2023.gif"></video>){:width="300px"}
+![CLI GIF](GMT20231227-004327_Clip_Chaya Vogel's Clip 12_26_2023.gif){:width="300px"}
 
 ---
 
