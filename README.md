@@ -201,8 +201,8 @@ Each of the helper methods are called when its corresponding option on the menu 
 
 ## seed.py
 
-There is some optional seed data to get you started with two planets and some of their moons.
+Running this file will delete all previous data and populate the database with two planets and some of their moons.
 
 ### Usage
 
-Run python lib/seed.py to create the data. You should see the words "seeded database" printed to the terminal. 
+Run python lib/seed.py in the terminal. The words "seeded database" will print to the terminal when the process is complete. 
