@@ -1,4 +1,7 @@
-from src.data_helpers import (
+#/Users/chayavogel/Documents/Solar-System-Explorer/src/cli.py
+#note to self - reduce repetitive code
+
+from data_helpers import (
     exit_program,
     list_planets,
     find_planet_by_name,
@@ -34,7 +37,7 @@ def main():
 def main_menu():
     print("------------THE SOLAR SYSTEM-------------")
     print("----------------MAIN MENU----------------")
-    print("Please select an option by entering one of the numbers below:")
+    print("Please select an option by entering one of the numbers below, and then pressing the Enter key:")
     print("0. Exit the program")
     print("1. Planets")
     print("2. Moons")
@@ -69,6 +72,7 @@ def planets():
             print("Invalid choice")
 
 def planets_menu():
+    # Display the planets menu options to the user.
     print("----------------PLANETS MENU----------------")
     print("Please select an option by entering one of the numbers below:")
     print("0. Exit to main menu")

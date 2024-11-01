@@ -1,5 +1,5 @@
-# lib/models/planet.py
-from models.__init__ import CURSOR, CONN
+#/Users/chayavogel/Documents/Solar-System-Explorer/src/models/planet.py
+from . import CURSOR, CONN
 
 PLANETS = [
     "Mercury", 

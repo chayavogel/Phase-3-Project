@@ -19,10 +19,10 @@ Fork the Repository:
 Fork the repository on GitHub.
 
 Clone the forked repository to your local machine:
-Command: `git clone git@github.com:chayavogel/Phase-3-Project.git`
+Command: `git clone git@github.com:chayavogel/Solar-System-Explorer.git`
 
 Navigate to the Project Directory:
-Command: `cd Phase-3-Project`
+Command: `cd Solar-System-Explorer`
 
 Install Dependencies:
 Create a virtual environment and install the project dependencies.
@@ -32,7 +32,7 @@ Activate the Virtual Environment:
 Command: `pipenv shell`
 
 Run the CLI Application:
-Command: `python my_cli_app.py`
+Command: `python src/cli.py`
 
 You may now navigate the menu by following the prompts!
 

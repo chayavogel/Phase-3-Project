@@ -1,4 +1,4 @@
-# lib/helpers.py
+#/Users/chayavogel/Documents/Solar-System-Explorer/src/data_helpers.py
 from models.planet import Planet
 from models.moon import Moon
 
@@ -29,7 +29,7 @@ def find_planet_by_name():
 
 def create_planet():
 
-    name = input("Enter the planet's name (correctly spelled and in title_case): ")
+    name = input("Enter the planet's name (correctly spelled and in title case): ")
     color = input("Enter the planet's color: ")
     try:
         planet = Planet.create(name, color)
@@ -45,7 +45,7 @@ def update_planet():
     if planet := Planet.find_by_name(name):
         try:
             print(f"Current data => {planet.name}: color = {planet.color}")
-            name = input("Enter the planet's new name (correctly spelled and in title_case): ")
+            name = input("Enter the planet's new name (correctly spelled and in title case): ")
             planet.name = name
             color = input("Enter the planet's new color: ")
             planet.color = color
@@ -101,7 +101,7 @@ def find_moon_by_name():
 
 def create_moon():
     name = input("Enter the moon's name: ")
-    parent_planet_input = input("Enter the moon's parent planet (correctly spelled, title_case): ")
+    parent_planet_input = input("Enter the moon's parent planet (correctly spelled, title case): ")
 
     parent_planet_match = Planet.find_by_name(parent_planet_input)
 
@@ -126,7 +126,7 @@ def update_moon():
 
             new_name = input("Enter moon's new name (title-case): ")
             moon.name = new_name
-            new_planet_name = input("Enter moon's new parent-planet (correctly spelled and in title_case): ")
+            new_planet_name = input("Enter moon's new parent-planet (correctly spelled and in title case): ")
             if new_planet_object := Planet.find_by_name(new_planet_name):
                 moon.planet_id = new_planet_object.id
                 moon.update()

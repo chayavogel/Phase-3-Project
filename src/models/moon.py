@@ -1,4 +1,4 @@
-# lib/models/moon.py
+#/Users/chayavogel/Documents/Solar-System-Explorer/src/models/moon.py
 from models.__init__ import CURSOR, CONN
 from models.planet import Planet
 
