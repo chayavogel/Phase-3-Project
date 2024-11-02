@@ -45,6 +45,7 @@ def main_menu():
 def planets():
     while True:
         planets_menu()
+        #find out how this works - how does it know the input?
         planet_choice = input("> ")
 
         if planet_choice == "0":

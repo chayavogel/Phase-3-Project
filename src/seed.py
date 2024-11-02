@@ -1,5 +1,6 @@
-#/Users/chayavogel/Documents/Solar-System-Explorer/src/seed.py
 #!/usr/bin/env python3
+
+#/Users/chayavogel/Documents/Solar-System-Explorer/src/seed.py
 
 from models.planet import Planet
 from models.moon import Moon
