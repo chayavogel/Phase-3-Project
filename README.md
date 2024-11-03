@@ -1,9 +1,11 @@
 # Phase 3 CLI + ORM Project
 ## Solar System Explorer
 
-## Description
+## Application Overview
 
-This is a command line interface (CLI) application that allows users to explore the one-to-many relationship of planets and their multiple moons. It can easily be adapted to represent many other one-to-many relationships.
+The Solar System Explorer is a command-line interface (CLI) app that allows users to manage a database of planets and their moons. It provides functionality to view, create, update, and delete entries for planets and moons, along with displaying relationships between them.
+
+The app uses SQLite for data storage, and its modular design organizes logic for different entities like planets and moons into separate files.
 
 ---
 
@@ -94,13 +96,13 @@ The Planet class is designed to represent individual planets in the solar system
 - `name`: A string representing the name of the planet.
 - `color`: A string representing the color of the planet.
 
-### Class Methods
+### Methods
 
 1. `create_table`
 
 Allows you to initially create a database table to store planet information if it hasn't been created yet.
 
-`drop_table`
+2. `drop_table`
 
 Allows you to delete the database table used for storing planet information.
 
@@ -150,7 +152,7 @@ The Moon class is designed to represent individual moons with associated attribu
 - `name`: A string representing the name of the moon.
 - `planet_id`: An integer representing the ID of the parent planet. It serves as a reference to an instance of the Planet class.
 
-### Class Methods
+### Methods
 
 1. `create_table`
 
@@ -159,6 +161,18 @@ Allows you to initially create a database table to store moon information if it 
 2. `drop_table`
 
 Allows you to delete the database table used for storing moon information.
+
+1. `save`
+
+Allows you to save a newly created moon instance to the database. The instance is added to the moons table.
+
+2. `update`
+
+Allows you to update the information of a moon both in its object and in the database.
+
+3. `delete`
+
+Allows you to delete a moon instance and remove its corresponding row from the database.
 
 3. `create`
 
@@ -180,27 +194,13 @@ Finds a moon instance by its ID and returns the corresponding Moon object.
 
 Finds a moon instance by its name and returns the corresponding Moon object.
 
-### Instance Methods
-
-1. `save`
-
-Allows you to save a newly created moon instance to the database. The instance is added to the moons table.
-
-2. `update`
-
-Allows you to update the information of a moon both in its object and in the database.
-
-3. `delete`
-
-Allows you to delete a moon instance and remove its corresponding row from the database.
-
 ## helpers.py
 
 Each of the helper methods are called when its corresponding option on the menu is selected.
 
 ## seed.py
 
-Running this file will delete all previous data and populate the database with two planets and some of their moons.
+Running this file will delete all previous data and populate the database with all the planets and one of their moons.
 
 ### Usage
 

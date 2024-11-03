@@ -1,5 +1,5 @@
 #/Users/chayavogel/Documents/Solar-System-Explorer/src/cli.py
-#note to self - reduce repetitive code
+# note to self - reduce repetitive code
 
 from data_helpers import (
     exit_program,
@@ -39,13 +39,12 @@ def main_menu():
     print("----------------MAIN MENU----------------")
     print("Please select an option by entering one of the numbers below, and then pressing the Enter key:")
     print("0. Exit the program")
-    print("1. Planets")
-    print("2. Moons")
+    print("1. Planets Menu")
+    print("2. Moons Menu")
 
 def planets():
     while True:
         planets_menu()
-        #find out how this works - how does it know the input?
         planet_choice = input("> ")
 
         if planet_choice == "0":
@@ -74,6 +73,7 @@ def planets():
 
 def planets_menu():
     # Display the planets menu options to the user.
+    print("--------------------------------------------")
     print("----------------PLANETS MENU----------------")
     print("Please select an option by entering one of the numbers below:")
     print("0. Exit to main menu")
@@ -114,6 +114,7 @@ def moons():
             print("Invalid choice")
 
 def moons_menu():
+    print("------------------------------------------")
     print("----------------MOONS MENU----------------")
     print("Please select an option by entering one of the numbers below:")
     print("0. Exit to main menu")
